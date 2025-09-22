@@ -1,0 +1,320 @@
+<!-- E--Toungue with chat bot and desire colour range -->
+ 
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Tongue Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Add Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>E-Tongue Project</h1>
+            <p>Detecting and analyzing liquid taste profiles using advanced sensors and electronic signal processing</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#introduction" class="active">Introduction</a></li>
+            <li><a href="#principle">Working Principle</a></li>
+            <li><a href="#applications">Applications</a></li>
+            <li><a href="#results">Experimental Results</a></li>
+            <li><a href="#team">Team Members</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Introduction Section -->
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <div class="intro-content">
+                <div class="intro-text">
+                    <p>The Electronic Tongue (E-Tongue) is a revolutionary analytical instrument that mimics the human taste sensation. It consists of an array of non-specific chemical sensors with partial specificity (cross-sensitivity) to different compounds in liquid media, combined with appropriate pattern recognition and multivariate calibration methods.</p>
+                    <p>Our E-Tongue system can identify complex tastes and quantify taste attributes, providing objective, consistent, and digital taste information. This technology has significant applications in various industries including food and beverage, pharmaceuticals, and environmental monitoring.</p>
+                </div>
+                <div class="intro-image">
+                    <img src="https://i.pinimg.com/474x/40/3a/ba/403aba3b6d1d40e0e38eea78a5848bff.jpg" alt="Ayurvedic herbs and spices representing taste analysis">
+                </div>
+            </div>
+        </section>
+
+        <!-- Working Principle Section -->
+        <section id="principle">
+            <h2>Working Principle</h2>
+            <div class="principle-content">
+                <p>The E-Tongue operates through a multi-step process that transforms chemical information into actionable data:</p>
+                <div class="principle-steps">
+                    <div class="step" data-step="1">
+                        <i class="fas fa-vial"></i>
+                        <h3>Sample Collection</h3>
+                        <p>Liquid samples are introduced to the sensor array</p>
+                        <div class="step-details">
+                            <p>In this stage, liquid samples are carefully collected and prepared for analysis. The samples are placed in a controlled environment to ensure consistent temperature and conditions. Proper sample preparation is crucial for accurate taste analysis.</p>
+                        </div>
+                    </div>
+                    <div class="step" data-step="2">
+                        <i class="fas fa-wave-square"></i>
+                        <h3>Signal Acquisition</h3>
+                        <p>Sensors generate electronic signals based on chemical interactions</p>
+                        <div class="step-details">
+                            <p>The sensor array, composed of multiple cross-sensitive sensors, detects chemical compounds in the sample. Each sensor responds differently to various taste components, generating unique electronic signals that represent the sample's chemical profile.</p>
+                        </div>
+                    </div>
+                    <div class="step" data-step="3">
+                        <i class="fas fa-microchip"></i>
+                        <h3>Signal Processing</h3>
+                        <p>Raw signals are processed and digitized for analysis</p>
+                        <div class="step-details">
+                            <p>Raw analog signals from the sensors are amplified, filtered, and converted to digital format. Advanced algorithms remove noise and enhance relevant signal features, preparing the data for pattern recognition analysis.</p>
+                        </div>
+                    </div>
+                    <div class="step" data-step="4">
+                        <i class="fas fa-brain"></i>
+                        <h3>Pattern Recognition</h3>
+                        <p>Algorithms classify and quantify taste profiles</p>
+                        <div class="step-details">
+                            <p>Machine learning algorithms analyze the processed signals to identify patterns and correlations. The system compares the sample's fingerprint against a database of known taste profiles to classify and quantify taste attributes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Applications Section -->
+        <section id="applications">
+            <h2>Applications</h2>
+            <div class="applications-grid">
+                <div class="application">
+                    <h3>Food & Beverage Industry</h3>
+                    <p>Quality control, taste masking, product development, and shelf-life studies in food and beverage production.</p>
+                </div>
+                <div class="application">
+                    <h3>Pharmaceuticals</h3>
+                    <p>Drug taste assessment, bitterness masking evaluation, and formulation optimization.</p>
+                </div>
+                <div class="application">
+                    <h3>Environmental Monitoring</h3>
+                    <p>Water quality assessment, pollution detection, and wastewater treatment monitoring.</p>
+                </div>
+                <div class="application">
+                    <h3>Research & Development</h3>
+                    <p>Fundamental taste research, new sensor development, and algorithm improvement.</p>
+                </div>
+                <div class="application">
+                    <h3>Medical Diagnostics</h3>
+                    <p>Early detection of diseases through analysis of bodily fluids and changes in taste perception.</p>
+                </div>
+                <div class="application">
+                    <h3>Agricultural Industry</h3>
+                    <p>Soil and crop analysis, fertilizer optimization, and quality assessment of agricultural products.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experimental Results Section -->
+        <section id="results">
+            <h2>Experimental Results</h2>
+            <div class="results-content">
+                <p>Our experiments have demonstrated the E-Tongue's capability to accurately distinguish between various taste profiles and quantify taste attributes. Below are some of our key findings:</p>
+                
+                <div class="graph-container">
+                    <div class="graph-controls">
+                        <h3>Taste Analysis Results</h3>
+                        <div class="graph-buttons">
+                            <button class="graph-btn active" data-graph="sensor">Sensor Response</button>
+                            <button class="graph-btn" data-graph="taste">Taste Profile</button>
+                            <button class="graph-btn" data-graph="pca">PCA Analysis</button>
+                            <button class="upload-btn" id="upload-graph-btn">Upload Data</button>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="tasteChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <div class="table-controls">
+                        <h3>Quantitative Analysis Results</h3>
+                        <button class="upload-btn" id="upload-table-btn">Upload Data Table</button>
+                    </div>
+                    <div class="table-wrapper">
+                        <table id="dataTable">
+                            <thead>
+                                <tr>
+                                    <th>Sample</th>
+                                    <th>Sweetness</th>
+                                    <th>Bitterness</th>
+                                    <th>Sourness</th>
+                                    <th>Saltiness</th>
+                                    <th>Umami</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="6">Upload data to see results</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Members Section -->
+        <section id="team">
+            <h2>Team Members & Guide</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150" alt="Team Member">
+                    <h3>Mrs. Radha</h3>
+                    <p>Project Guide</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150" alt="Team Member">
+                    <h3>John Samuel J</h3>
+                    <p>Team Lead</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150" alt="Team Member">
+                    <h3>Jeba J David</h3>
+                    <p>Team Co-Lead</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150" alt="Team Member">
+                    <h3>Santhosh J P</h3>
+                    <p>Team Lead</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150" alt="Team Member">
+                    <h3>Christiba Leela C</h3>
+                    <p>Team Co-Lead</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150" alt="Team Member">
+                    <h3>Roshini T</h3>
+                    <p>Team Co-Lead</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150" alt="Team Member">
+                    <h3>Muthulakshmi M</h3>
+                    <p>Team Co-Lead</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <div class="contact-info">
+                        <div>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Department of Electronic Engineering, University Name, City, Country</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@etongue-project.edu</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Related References</h3>
+                    <div class="references">
+                        <ul>
+                            <li><a href="#">Journal of Electronic Sensors, 2023</a></li>
+                            <li><a href="#">IEEE Transactions on Instrumentation</a></li>
+                            <li><a href="#">Taste Analysis Handbook</a></li>
+                            <li><a href="#">Sensor Technology Review</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <p>Follow our project for updates and research findings</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-researchgate"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 E-Tongue Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Bot -->
+    <div class="chat-bot-container">
+        <div class="chat-bot-button">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div class="chat-bot-window">
+            <div class="chat-bot-header">
+                <h3>E-Tongue Assistant</h3>
+                <button class="chat-bot-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-bot-messages">
+                <div class="message bot-message">
+                    Hello! I'm your E-Tongue project assistant. How can I help you today?
+                </div>
+                <div class="typing-indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="chat-bot-input">
+                <input type="text" placeholder="Ask a question about the E-Tongue project...">
+                <button><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upload Modal -->
+    <div class="upload-modal" id="upload-modal">
+        <div class="upload-modal-content">
+            <div class="upload-modal-header">
+                <h3 id="upload-modal-title">Upload File</h3>
+                <span class="upload-modal-close">&times;</span>
+            </div>
+            <div class="upload-modal-body">
+                <p id="upload-modal-description">Please select a CSV file to upload.</p>
+                <input type="file" id="file-input" accept=".csv">
+                <div class="upload-modal-preview" id="upload-preview">
+                    <i class="fas fa-file-csv"></i>
+                    <p>File preview will appear here</p>
+                </div>
+            </div>
+            <div class="upload-modal-footer">
+                <button class="upload-modal-cancel">Cancel</button>
+                <button class="upload-modal-confirm" disabled>Upload</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
